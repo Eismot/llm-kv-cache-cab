@@ -424,7 +424,7 @@ mod tests {
             } else {
                 &helper.id
             };
-            assert_eq!(admission.evicted, [expected.clone()]);
+            assert_eq!(admission.evicted.as_slice(), std::slice::from_ref(expected));
             assert!(cache.used_units() <= 8);
             let resumed = cache.request(&main, "second").unwrap();
             assert_eq!(
