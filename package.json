@@ -1,0 +1,14 @@
+{
+  "name": "cache-cab-browser-tests",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test:browser": "playwright test",
+    "capture:frames": "playwright test --project=desktop --grep \"capture portfolio frames\""
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.0"
+  }
+}

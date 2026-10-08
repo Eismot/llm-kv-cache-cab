@@ -1,0 +1,33 @@
+name: LLM KV Cache Cab Checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  rust:
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        rust: ['1.81.0', stable]
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Select Rust toolchain
+        run: |
+          rustup toolchain install ${{ matrix.rust }} --profile minimal --component rustfmt --component clippy
+          rustup default ${{ matrix.rust }}
+      - name: Formatting
+        run: cargo fmt --all -- --check
+      - name: Strict linting
+        run: cargo clippy --locked --all-targets -- -D warnings
+      - name: Tests
+        run: cargo test --locked --all-targets

@@ -1,0 +1,7 @@
+/target/
+/.cache-cab/
+/captures/
+/.rumdl_cache/
+/node_modules/
+/test-results/
+/playwright-report/

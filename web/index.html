@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cache Cab | Session Cache Lab</title>
+  <link rel="icon" href="/icons/car-taxi-front.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/app.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+<main class="shell">
+  <nav class="lab-tabs" aria-label="Experiments"><a href="/">Cache policy</a><a href="/?view=coding">Coding conversation</a><a href="/?view=repository">Repository task</a></nav>
+  <section id="repository-frame" hidden aria-label="Real repository task">
+    <header class="header"><div class="brand"><span class="brand-mark"><img src="/icons/car-taxi-front.svg" alt="" width="26" height="26"></span><div><h1>Cache Cab</h1><p>Checkpointed repository task</p></div></div><div class="environment"><span class="simulation">REAL MODEL / REAL SOURCE</span><span class="local">LOCAL ONLY</span></div></header>
+    <div class="toolbar"><div class="commands"><button id="repository-next" class="primary" disabled><img src="/icons/play.svg" alt="" width="18" height="18"><span id="repository-command">Read + propose feature</span></button><button id="repository-reset" class="icon-button" title="Reset active engine experiments" aria-label="Reset repository task" disabled><img src="/icons/rotate-ccw.svg" alt="" width="20" height="20"></button></div><span class="coding-model">Qwen2.5-Coder / 1.5B / CPU</span></div>
+    <ol class="repository-timeline"><li>01 / Propose</li><li>02 / Test + park</li><li>03 / Helper task</li><li>04 / Restore + revise</li></ol>
+    <div id="repository-status" class="coding-status" role="status" aria-live="polite">Checking dedicated engine</div>
+    <div class="repository-grid"><div><h2>Read from repository / src/main.rs</h2><pre id="repository-source">Awaiting allowlisted source read</pre></div><div><h2>Model-authored addition / report_status</h2><pre id="repository-proposal">Awaiting real feature proposal</pre></div></div>
+    <div class="repository-check"><strong id="repository-tests">Disposable project / not tested</strong><span>Model supplies policy. Harness supplies HTTP wiring and fixed tests.</span></div>
+    <div class="repository-helper"><h2>Unrelated helper request / same engine slot</h2><pre id="repository-helper">Awaiting parked conversation</pre></div>
+    <div class="live-metrics repository-metrics"><div><span>Source identity</span><strong id="repository-hash">--</strong><small>SHA-256 / selected handler</small></div><div><span>KV parked on disk</span><strong id="repository-bytes">--</strong><small id="repository-save">--</small></div><div><span>Validated restore</span><strong id="repository-restore">--</strong><small id="repository-restored">--</small></div><div><span>Restored revision input</span><strong id="repository-reused">--</strong><small id="repository-new">--</small></div></div>
+    <footer class="coding-footer"><span id="repository-result">Proposal only / no changes applied to either repository</span><span>Generated policy must pass strict pure-AST review. Temporary offline project is not an OS sandbox.</span></footer>
+  </section>
+  <details id="repository-details" class="live-report" hidden><summary>Actual patch plan, compiler output, and measured trace</summary><pre id="repository-json"></pre></details>
+  <section id="coding-frame" aria-label="Real coding conversation" hidden>
+    <header class="header"><div class="brand"><span class="brand-mark"><img src="/icons/car-taxi-front.svg" alt="" width="26" height="26"></span><div><h1>Cache Cab</h1><p>Local coding conversation</p></div></div><div class="environment"><span class="simulation">REAL INFERENCE</span><span class="local">LOCAL ONLY</span></div></header>
+    <div class="toolbar"><div class="commands"><button id="coding-next" class="primary" disabled><img src="/icons/play.svg" alt="" width="18" height="18"><span id="coding-next-label">Generate refactor</span></button><button id="coding-reset" class="icon-button" aria-label="Reset conversation" title="Reset conversation" disabled><img src="/icons/rotate-ccw.svg" alt="" width="20" height="20"></button></div><span class="coding-model">Qwen2.5-Coder / 1.5B / Q4_K_M</span></div>
+    <ol class="coding-timeline"><li>01 / Refactor</li><li>02 / Save + clear</li><li>03 / Restore + follow-up</li></ol>
+    <div class="coding-status" id="coding-status" role="status" aria-live="polite">Checking dedicated engine</div>
+    <div class="coding-grid"><div><h2>Original / unchecked invoice arithmetic</h2><pre id="coding-original">fn invoice_total(unit_price: u64, quantity: u64, discount_percent: u64) -&gt; u64 {
+    let gross = unit_price * quantity;
+    let discount = gross * discount_percent / 100;
+    gross - discount
+}</pre></div><div><h2>Actual model response</h2><pre id="coding-answer">Awaiting local model</pre></div></div>
+    <div class="coding-validation"><span id="coding-validation">Invoice tests / pending</span><span id="coding-context">256-token output cap</span></div>
+    <div class="coding-followup"><h2>Follow-up / rounding and intermediate overflow</h2><pre id="coding-followup">Awaiting restored conversation</pre><p id="coding-reference" class="coding-reference">Test oracle: (101, 3, 10) -&gt; Some(273); (u64::MAX, 1, 0) -&gt; Some(u64::MAX); (u64::MAX, 1, 50) -&gt; None. Code tests do not validate the model's explanation.</p></div>
+    <div class="live-metrics coding-metrics"><div><span>First response</span><strong id="coding-first-time">--</strong><small id="coding-first-tokens">--</small></div><div><span>Binary KV checkpoint</span><strong id="coding-bytes">--</strong><small id="coding-save-time">--</small></div><div><span>Validated restore</span><strong id="coding-restore-time">--</strong><small id="coding-restored">--</small></div><div><span>Follow-up input</span><strong id="coding-reused">--</strong><small id="coding-new-tokens">--</small></div></div>
+    <footer class="coding-footer"><span id="coding-detail">Resident model / dedicated slot / no speedup claim</span><span>Canonical transcript re-prefilled before save; model and KV hashes verified.</span></footer>
+  </section>
+  <details id="coding-report" class="live-report" hidden><summary>Full measured coding report</summary><pre id="coding-json"></pre></details>
+  <section id="demo-frame" aria-label="Cache Cab comparison">
+    <header class="header">
+      <div class="brand"><span class="brand-mark"><img src="/icons/car-taxi-front.svg" alt="" width="26" height="26"></span><div><h1>Cache Cab<span class="version">0.1</span></h1><p>Session cache lab</p></div></div>
+      <div class="environment"><span class="simulation">DETERMINISTIC DEMO</span><span class="local">LOCAL ONLY</span></div>
+    </header>
+    <div class="toolbar">
+      <div class="commands">
+        <button id="play" class="primary" title="Run or pause the scripted request route" disabled><img id="play-icon" src="/icons/play.svg" alt="" width="18" height="18"><span id="play-label">Run route</span></button>
+        <button id="step" class="icon-button" aria-label="Next request" title="Next request" disabled><img src="/icons/step-forward.svg" alt="" width="20" height="20"></button>
+        <button id="reset" class="icon-button" aria-label="Reset route" title="Reset route" disabled><img src="/icons/rotate-ccw.svg" alt="" width="20" height="20"></button>
+      </div>
+      <label class="budget-control" for="budget"><span>Modeled RAM budget</span><input id="budget" type="range" min="6" max="12" step="1" value="8" disabled><output id="budget-value" for="budget">8 units</output></label>
+    </div>
+    <div class="disclosure"><span>Memory units and timings are modeled.</span><span>Checkpoint files are real JSON, not LLM tensors.</span></div>
+    <div class="overview">
+      <div><span class="metric-label">REQUEST ROUTE</span><strong id="route-count">00 <span>/ 12</span></strong><div id="route-track" class="route-track" aria-hidden="true"></div></div>
+      <div><span class="metric-label">MODELED TIME SAVED VS LRU</span><strong id="time-delta">0 <span>ms</span></strong></div>
+      <div><span class="metric-label">CHECKPOINTS ON DISK</span><strong id="checkpoint-count">0 <span>files</span></strong><small id="checkpoint-bytes">0 bytes</small></div>
+    </div>
+    <div class="current-request"><span class="request-number" id="request-number">00</span><div class="request-copy"><span class="eyebrow" id="request-kind">DISPATCH QUEUE</span><h2 id="request-title">Route ready</h2><p id="request-prompt">No requests dispatched.</p></div><span class="request-state" id="request-state">IDLE</span></div>
+    <div class="comparison" id="comparison">
+      <article class="policy" id="lru"><div class="policy-title"><h2>LRU</h2><span>Recency</span></div><div class="capacity"><span>RAM</span><strong id="lru-capacity">0 / 8 units</strong></div><div class="ram-lane" id="lru-ram" aria-label="LRU resident sessions"></div><div class="decision" id="lru-decision">Awaiting first request</div><div class="disk-heading"><span>CHECKPOINT LANE</span><span id="lru-disk-count">0 on disk</span></div><div class="disk-lane" id="lru-disk"></div><div class="policy-stats"><div><strong id="lru-hits">0</strong><span>RAM hits</span></div><div><strong id="lru-restores">0</strong><span>Restores</span></div><div><strong id="lru-time">0 ms</strong><span>Modeled work</span></div></div></article>
+      <article class="policy" id="cost"><div class="policy-title"><h2>Cost-aware<span class="policy-tag">HEURISTIC</span></h2><span>Rebuild cost / unit</span></div><div class="capacity"><span>RAM</span><strong id="cost-capacity">0 / 8 units</strong></div><div class="ram-lane" id="cost-ram" aria-label="Cost-aware resident sessions"></div><div class="decision" id="cost-decision">Awaiting first request</div><div class="disk-heading"><span>CHECKPOINT LANE</span><span id="cost-disk-count">0 on disk</span></div><div class="disk-lane" id="cost-disk"></div><div class="policy-stats"><div><strong id="cost-hits">0</strong><span>RAM hits</span></div><div><strong id="cost-restores">0</strong><span>Restores</span></div><div><strong id="cost-time">0 ms</strong><span>Modeled work</span></div></div></article>
+    </div>
+    <footer class="frame-footer"><span>Same requests. Same budget. Different retention policy.</span><span id="runtime-state" role="status" aria-live="polite">Connecting to local runtime</span></footer>
+  </section>
+  <section class="live-lab" aria-labelledby="live-title">
+    <div class="live-heading"><div><span class="eyebrow">SEPARATE EXPERIMENT / REAL ENGINE</span><h2 id="live-title">Live KV Checkpoint</h2></div><button id="live-run" title="Run the checkpoint smoke test on the dedicated engine" disabled><img src="/icons/play.svg" alt="" width="16" height="16"><span id="live-run-label">Run checkpoint test</span></button></div>
+    <p class="live-state" id="live-status" role="status" aria-live="polite">Checking live engine configuration</p>
+    <div id="live-metrics" class="live-metrics" hidden><div><span>Fresh-slot prefill</span><strong id="live-cold">--</strong><small id="live-cold-tokens">--</small></div><div><span>KV checkpoint</span><strong id="live-bytes">--</strong><small id="live-save">--</small></div><div><span>Validated restore</span><strong id="live-restore">--</strong><small id="live-restored-tokens">--</small></div><div><span>Restored-slot prefill</span><strong id="live-warm">--</strong><small id="live-cached-tokens">--</small></div></div>
+    <p class="live-verdict" id="live-verdict" hidden></p>
+    <details id="live-report" class="live-report" hidden><summary>Measured report</summary><pre id="live-json"></pre></details>
+    <div class="live-scope">Dedicated single slot; cleared before and after the test. Resident model, prefill only. No coding-quality or policy-speedup claim.</div>
+  </section>
+  <section class="dispatch-log" aria-labelledby="log-title"><div class="log-heading"><h2 id="log-title">Dispatch log</h2><span>RECENT REQUESTS</span></div><div class="table-scroll"><table><thead><tr><th>Request</th><th>Session</th><th>LRU</th><th>Cost-aware</th><th>Modeled delta</th></tr></thead><tbody id="log-body"><tr><td colspan="5" class="empty-log">No requests yet</td></tr></tbody></table></div></section>
+  <details class="transcript"><summary>Scripted response</summary><p id="response">No response yet.</p></details>
+  <p id="error" class="error" role="alert" hidden></p>
+</main>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Cache Cab: Demo",
+			"type": "shell",
+			"command": "cargo",
+			"args": [
+				"run",
+				"--locked",
+				"--",
+				"--port=7331"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		}
+	]
+}
