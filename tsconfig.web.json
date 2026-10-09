@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "newLine": "lf",
+    "rootDir": "web",
+    "outDir": "web/generated"
+  },
+  "include": ["web/app.ts"]
+}

@@ -325,7 +325,7 @@ fn router(app: App) -> Router {
                         header::CONTENT_TYPE,
                         "application/javascript; charset=utf-8",
                     )],
-                    include_str!("../web/app.js"),
+                    include_str!("../web/generated/app.js"),
                 )
             }),
         )

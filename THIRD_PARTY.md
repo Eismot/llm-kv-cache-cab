@@ -41,9 +41,10 @@ BSL-1.0, and Apache-2.0 with LLVM exception. Alternative expressions allow a cho
 AND expressions require complying with each applicable part. The review found no
 declared GPL/AGPL dependency in the resolved Rust metadata.
 
-Optional browser tooling is pinned in package-lock.json. Playwright is developer
+Optional browser tooling is pinned in package-lock.json. Playwright and TypeScript are developer
 tooling; neither node_modules nor browser executables are included in this source
-repository. Playwright uses Apache-2.0; its installed browser/tool distributions
+repository. Playwright and TypeScript use Apache-2.0. The Node type declarations
+and undici-types use MIT. Installed browser/tool distributions
 carry their own third-party notices and are not relicensed by Cache Cab.
 
 Dependencies remain under their upstream licenses even when linked into an MIT

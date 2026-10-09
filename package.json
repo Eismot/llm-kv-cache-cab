@@ -3,12 +3,18 @@
   "private": true,
   "type": "module",
   "license": "MIT",
-  "engines": { "node": ">=20" },
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
+    "build:web": "tsc --project tsconfig.web.json",
+    "typecheck": "tsc --noEmit",
     "test:browser": "playwright test",
     "capture:frames": "playwright test --project=desktop --grep \"capture portfolio frames\""
   },
   "devDependencies": {
-    "@playwright/test": "1.64.0"
+    "@playwright/test": "1.64.0",
+    "@types/node": "20.17.19",
+    "typescript": "5.7.3"
   }
 }
